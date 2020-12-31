@@ -18,7 +18,6 @@ class GroupConv2D(Layer):
     def __init__(self, out_filters, kernel_size, strides=1, use_bias=False, padding='same',
                  kernel_initializer='glorot_uniform', kernel_regularizer=None, groups=32, **kwargs):
         super(GroupConv2D, self).__init__(**kwargs)
-        self.supports_masking = True
         self.out_filters = out_filters
         self.kernel_size = kernel_size
         self.strides = strides
